@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,15 +22,15 @@ const getMockResponse = (query: string) => {
   const lower = query.toLowerCase();
   
   if (lower.includes('warehouse') && lower.includes('underperform') || lower.includes('why is warehouse')) {
-    return `## Warehouse Alpha — Performance Analysis
+    return `## Warehouse Alpha â€” Performance Analysis
 
-**Overall Efficiency Score: 72/100** ⚠️ Below Target (Target: 85)
+**Overall Efficiency Score: 72/100** âš ï¸ Below Target (Target: 85)
 
 ### Root Causes Identified:
-1. **Zone C Congestion** — 94% occupancy causing pick-path inefficiency (+23% pick time)
-2. **Inbound Bottleneck** — 14 trucks/day exceeds dock capacity (optimal: 10)
-3. **Staff Shortage** — 18% below optimal headcount on night shift
-4. **SKU Slotting** — 340 high-velocity items in slow zones
+1. **Zone C Congestion** â€” 94% occupancy causing pick-path inefficiency (+23% pick time)
+2. **Inbound Bottleneck** â€” 14 trucks/day exceeds dock capacity (optimal: 10)
+3. **Staff Shortage** â€” 18% below optimal headcount on night shift
+4. **SKU Slotting** â€” 340 high-velocity items in slow zones
 
 ### Impact:
 - Order fulfillment delay: +1.8 hours avg
@@ -52,9 +52,9 @@ const getMockResponse = (query: string) => {
 
 | Product | Stock Left | Days Remaining | Recommended Order | Supplier | Cost |
 |---------|-----------|----------------|------------------|----------|------|
-| iPhone 15 Pro | 120 units | **5.8 days** 🔴 | 500 units | TechCorp Asia | $182,000 |
-| AirPods Pro 4 | 85 units | **4.1 days** 🔴 | 350 units | TechCorp Asia | $52,500 |
-| RTX 4090 | 45 units | **3.2 days** 🔴 | 200 units | GlobalParts Inc | $119,800 |
+| iPhone 15 Pro | 120 units | **5.8 days** ðŸ”´ | 500 units | TechCorp Asia | $182,000 |
+| AirPods Pro 4 | 85 units | **4.1 days** ðŸ”´ | 350 units | TechCorp Asia | $52,500 |
+| RTX 4090 | 45 units | **3.2 days** ðŸ”´ | 200 units | GlobalParts Inc | $119,800 |
 
 **Bundle Tip:** Combining iPhone + AirPods orders to TechCorp Asia saves $4,200 in freight.
 
@@ -65,7 +65,7 @@ Estimated revenue protected: $890,000`;
   if (lower.includes('supplier') && (lower.includes('fail') || lower.includes('risk'))) {
     return `## Supplier Risk Alert: Shanghai TechParts
 
-**Failure Probability: 73%** 🔴 High Risk
+**Failure Probability: 73%** ðŸ”´ High Risk
 
 ### Key Risk Factors:
 - **Financial Health:** Credit rating downgraded from B+ to C- this week.
@@ -74,7 +74,7 @@ Estimated revenue protected: $890,000`;
 
 ### Affected SKUs:
 - Core Processors (SKU-CP-001) - 4 weeks inventory remaining.
-- Power Modules (SKU-PM-402) - 2 weeks inventory remaining. ⚠️
+- Power Modules (SKU-PM-402) - 2 weeks inventory remaining. âš ï¸
 
 ### Recommended Actions:
 1. Shift 40% of Power Module volume to alternate supplier (Taiwan Semi Components).
@@ -89,11 +89,11 @@ Estimated revenue protected: $890,000`;
 
 | Event | Severity | Affected Value | Recommendation |
 |-------|----------|----------------|----------------|
-| Typhoon nearing Shenzhen Port | 🔴 High | $2.4M | Reroute inbound vessels to Hong Kong |
-| Shanghai TechParts Financials | 🔴 High | $850K | Shift to secondary suppliers immediately |
-| EU Customs Strike | ⚠️ Med | $1.2M | Expect 4-day delay; notify VIP customers |
-| Nickel Price Surge (+12%) | ⚠️ Med | $400K | Lock in current contracts for Q4 |
-| Warehouse B Staffing Shortage | ⚠️ Med | N/A | Approve emergency overtime budget |
+| Typhoon nearing Shenzhen Port | ðŸ”´ High | $2.4M | Reroute inbound vessels to Hong Kong |
+| Shanghai TechParts Financials | ðŸ”´ High | $850K | Shift to secondary suppliers immediately |
+| EU Customs Strike | âš ï¸ Med | $1.2M | Expect 4-day delay; notify VIP customers |
+| Nickel Price Surge (+12%) | âš ï¸ Med | $400K | Lock in current contracts for Q4 |
+| Warehouse B Staffing Shortage | âš ï¸ Med | N/A | Approve emergency overtime budget |
 
 **Overall Supply Chain Health Score: 78/100** (Down 3 pts from yesterday)`;
   }
@@ -101,7 +101,7 @@ Estimated revenue protected: $890,000`;
   if (lower.includes('delay') || lower.includes('shipment') || lower.includes('ss-2024-0848')) {
     return `## Shipment Status: SS-2024-0848
 
-**Status: Delayed** 🔴
+**Status: Delayed** ðŸ”´
 **Current Location:** Anchored near Port of Yantian
 
 ### Situation:
@@ -122,7 +122,7 @@ Stockout Risk: High for SKU-GPU-990 by Oct 15.
   if (lower.includes('forecast') || lower.includes('demand')) {
     return `## 30-Day Demand Forecast
 
-**Projected Global Demand: +18% vs Last Month** 🟢
+**Projected Global Demand: +18% vs Last Month** ðŸŸ¢
 
 ### Key Drivers:
 1. **Upcoming Festival Season:** Historical data shows a 25% spike in consumer electronics.
@@ -141,7 +141,7 @@ We currently have a **12% shortfall** in Smartphone inventory to meet this forec
   if (lower.includes('report') || lower.includes('executive')) {
     return `## Executive Supply Chain Summary
 
-**Overall Health Score: 88/100** 🟢 Optimal
+**Overall Health Score: 88/100** ðŸŸ¢ Optimal
 
 ### Key Performance Indicators (KPIs):
 - **On-Time In-Full (OTIF):** 94.2% (Target 95%)
@@ -149,9 +149,9 @@ We currently have a **12% shortfall** in Smartphone inventory to meet this forec
 - **Freight Spend:** $4.2M (-3% vs budget)
 
 ### Top 3 Active Risks:
-1. Component shortage for Electric Motors (Risk level: 🔴)
-2. Port congestion at Long Beach (Risk level: ⚠️)
-3. Supplier financial instability: TechParts Inc (Risk level: 🔴)
+1. Component shortage for Electric Motors (Risk level: ðŸ”´)
+2. Port congestion at Long Beach (Risk level: âš ï¸)
+3. Supplier financial instability: TechParts Inc (Risk level: ðŸ”´)
 
 ### Top 3 Recommendations:
 1. **Approve $450K spot buy** for Electric Motors to secure Q3 production.
@@ -162,7 +162,7 @@ We currently have a **12% shortfall** in Smartphone inventory to meet this forec
   if (lower.includes('procurement') || lower.includes('optimize')) {
     return `## Procurement Optimization Plan
 
-**Total Identified Savings: $106,000** 🟢
+**Total Identified Savings: $106,000** ðŸŸ¢
 
 ### Consolidation Opportunities:
 - **Packaging Materials:** Consolidate 3 regional suppliers into 1 global contract.
@@ -236,14 +236,14 @@ function MarkdownRenderer({ content }: { content: string }) {
   };
 
   const parseInline = (text: string) => {
-    const parts = text.split(/(\\*\\*.*?\\*\\*|🔴|⚠️|🟡|🟢)/g);
+    const parts = text.split(/(\\*\\*.*?\\*\\*|ðŸ”´|âš ï¸|ðŸŸ¡|ðŸŸ¢)/g);
     return parts.map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={i} className="font-semibold text-white">{part.slice(2, -2)}</strong>;
       }
-      if (part === '🔴') return <span key={i} className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/30 ml-2">CRITICAL</span>;
-      if (part === '⚠️' || part === '🟡') return <span key={i} className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 ml-2">WARNING</span>;
-      if (part === '🟢') return <span key={i} className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-green-500/20 text-green-400 border border-green-500/30 ml-2">GOOD</span>;
+      if (part === 'ðŸ”´') return <span key={i} className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/30 ml-2">CRITICAL</span>;
+      if (part === 'âš ï¸' || part === 'ðŸŸ¡') return <span key={i} className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 ml-2">WARNING</span>;
+      if (part === 'ðŸŸ¢') return <span key={i} className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-green-500/20 text-green-400 border border-green-500/30 ml-2">GOOD</span>;
       return part;
     });
   };
@@ -271,7 +271,7 @@ function MarkdownRenderer({ content }: { content: string }) {
     } else if (line.startsWith('- ') || line.match(/^\\d+\\. /)) {
       elements.push(
         <div key={i} className="flex items-start ml-2 mb-1.5">
-          <span className="text-blue-400 mr-2 mt-0.5">•</span>
+          <span className="text-blue-400 mr-2 mt-0.5">â€¢</span>
           <span className="text-gray-300">{parseInline(line.replace(/^(- |\\d+\\. )/, ''))}</span>
         </div>
       );
@@ -374,7 +374,7 @@ export default function ExecutiveCopilot() {
     setInput(e.target.value);
     if (textareaRef.current) {
       textareaRef.current.style.height = 'auto';
-      textareaRef.current.style.height = \`\${Math.min(e.target.scrollHeight, 200)}px\`;
+      textareaRef.current.style.height = `${Math.min(e.target.scrollHeight, 200)}px`;
     }
   };
 
@@ -482,9 +482,9 @@ export default function ExecutiveCopilot() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     key={msg.id}
-                    className={\`flex \${msg.role === 'user' ? 'justify-end' : 'justify-start'}\`}
+                    className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
-                    <div className={\`flex gap-4 max-w-[85%] \${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}\`}>
+                    <div className={`flex gap-4 max-w-[85%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
                       {/* Avatar */}
                       <div className="shrink-0 mt-1">
                         {msg.role === 'user' ? (
@@ -499,13 +499,13 @@ export default function ExecutiveCopilot() {
                       </div>
 
                       {/* Bubble */}
-                      <div className={\`flex flex-col \${msg.role === 'user' ? 'items-end' : 'items-start'}\`}>
+                      <div className={`flex flex-col ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
                         <div 
-                          className={\`px-6 py-4 rounded-2xl shadow-xl backdrop-blur-md \${
+                          className={`px-6 py-4 rounded-2xl shadow-xl backdrop-blur-md ${
                             msg.role === 'user' 
                               ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-tr-sm' 
                               : 'bg-white/[0.05] border border-white/10 text-gray-200 rounded-tl-sm'
-                          }\`}
+                          }`}
                         >
                           {msg.role === 'user' ? (
                             <p className="whitespace-pre-wrap">{msg.content}</p>
