@@ -204,7 +204,7 @@ function MarkdownRenderer({ content }: { content: string }) {
   const flushTable = () => {
     if (inTable && tableHeader.length > 0) {
       elements.push(
-        <div key={\`table-\${elements.length}\`} className="overflow-x-auto my-4 border border-white/10 rounded-lg">
+        <div key={`table-${elements.length}`} className="overflow-x-auto my-4 border border-white/10 rounded-lg">
           <table className="min-w-full divide-y divide-white/10">
             <thead className="bg-white/5">
               <tr>
