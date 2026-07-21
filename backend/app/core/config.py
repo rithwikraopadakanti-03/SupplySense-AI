@@ -1,25 +1,25 @@
 import os
 from typing import List
+from pydantic_settings import BaseSettings
 
 
-class Settings:
+class Settings(BaseSettings):
     APP_NAME: str = "SupplySense"
-    ENVIRONMENT: str = os.getenv("ENVIRONMENT", "production")
-    DEBUG: bool = os.getenv("DEBUG", "False").lower() == "true"
+    ENVIRONMENT: str = "production"
+    DEBUG: bool = False
 
-    DATABASE_URL: str = os.getenv(
-        "DATABASE_URL",
-        "postgresql://supplysense_user:supplysense_pass@localhost:5432/supplysense"
-    )
+    DATABASE_URL: str = "postgresql://user:pass@localhost:5432/supplysense"
 
-    SECRET_KEY: str = os.getenv("SECRET_KEY", "supplysense-secret-key-min-32-chars-long!!")
+    SECRET_KEY: str = "supplysense-secret-key-min-32-chars-long!!"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
     ALLOWED_ORIGINS: List[str] = ["*"]
 
-    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-    USE_MOCK_AI: bool = os.getenv("USE_MOCK_AI", "True").lower() == "true"
+    GEMINI_API_KEY: str = ""
+    USE_MOCK_AI: bool = True
+
+    model_config = {"env_file": ".env", "case_sensitive": True}
 
 
 settings = Settings()

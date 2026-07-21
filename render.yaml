@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: supplysense-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: USE_MOCK_AI
+        value: "True"
+      - key: SECRET_KEY
+        value: "supplysense-secret-2024"
+      - key: PORT
+        value: "8000"
